@@ -4,3 +4,8 @@
 TEST_CASE("Verify Test Configuration", "verification") {
 	REQUIRE(true == true);
 }
+
+TEST_CASE("Test operator precedence without parenthesis")
+{
+	REQUIRE(operator_precedence_1(2, 6, 3) == 4); 
+}
