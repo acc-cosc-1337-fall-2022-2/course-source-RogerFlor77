@@ -18,20 +18,19 @@ int factorial(int num)
 
 int gcd(int num2, int num3) 
 {
-   if (num2 == 0 || num3 == 0)
-   {
-   return 0;
-   }
-   else if (num2 == num3)
-   {
-   return num2;
-   }
-   else if (num2 > num3)
-   {
-   return gcd(num2-num3, num3);
-   }
-   else 
-   {
-    return gcd(num2, num3-num2);
-   }
+   while(num2 != num3)
+{
+  if (num2 < num3)
+{
+  num2 = num2+num3;
+  num3 = num2 - num3;
+  num2 = num2 - num3;
+}
+if (num2 > num3)
+{
+  num2 = num2-num3;
+}
+}
+return num2;
+
 }
